@@ -58,9 +58,9 @@ public class PostService {
         Post post = new Post();
         post.setTitle(postDto.getTitle());
         post.setContent(postDto.getContent());
-        User loggedInUser = authService.getCurrentUser().orElseThrow(() -> new IllegalArgumentException("User Not Found"));
+        //User loggedInUser = authService.getCurrentUser().orElseThrow(() -> new IllegalArgumentException("User Not Found"));
         post.setCreatedOn(Instant.now());
-        post.setUsername(loggedInUser.getUsername());
+        post.setUsername(postDto.getUsername());
         post.setUpdatedOn(Instant.now());
         return post;
     }
