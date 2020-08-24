@@ -32,6 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	                .permitAll()
 	                .anyRequest()
 	                .authenticated();
+	        httpSecurity.cors();
 	    }
 
 	    @Autowired
