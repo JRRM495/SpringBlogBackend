@@ -31,5 +31,9 @@ public class AuthController {
 	    public AuthenticationResponse login(@RequestBody LoginRequest loginRequest) {
 	        return authService.login(loginRequest);
 	    }
+	   
+	   public void testMethod() {
+		   
+	   }
 
 }
