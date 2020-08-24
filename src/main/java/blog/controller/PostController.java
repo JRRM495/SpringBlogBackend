@@ -11,7 +11,7 @@ import blog.security.PostService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/auth/posts")
+@RequestMapping("/api/posts")
 public class PostController {
 
     @Autowired
