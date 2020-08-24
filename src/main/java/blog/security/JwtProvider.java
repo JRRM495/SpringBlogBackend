@@ -19,7 +19,7 @@ public class JwtProvider {
 	
 	
     private KeyStore keyStore;
-    String keystring = "qwertyuiopasdfghjklzxcvbnm123456";
+ 
     @PostConstruct
     public void init() {
         try {
@@ -36,7 +36,7 @@ public class JwtProvider {
         User principal = (User) authentication.getPrincipal();      
         return Jwts.builder()
                 .setSubject(principal.getUsername())
-//                .signWith(getPrivateKey())
+                .signWith(getPrivateKey())
                 .compact();
     }
 
