@@ -16,7 +16,7 @@ public class PostController {
 
     @Autowired
     private PostService postService;
-
+   
     @PostMapping("/create")
     public ResponseEntity createPost(@RequestBody PostDto postDto) {
         postService.createPost(postDto);
