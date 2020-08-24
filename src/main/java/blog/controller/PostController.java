@@ -11,14 +11,13 @@ import blog.security.PostService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/posts/")
-@CrossOrigin
+@RequestMapping("/api/posts")
 public class PostController {
 
     @Autowired
     private PostService postService;
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity createPost(@RequestBody PostDto postDto) {
         postService.createPost(postDto);
         return new ResponseEntity(HttpStatus.OK);
