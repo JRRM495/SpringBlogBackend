@@ -49,6 +49,7 @@ public class AuthService {
 	        return new AuthenticationResponse(authenticationToken, loginRequest.getUsername());
 	    }
 
+	    //full class name is used since we already have a user object model
 	    public Optional<org.springframework.security.core.userdetails.User> getCurrentUser() {
 	        org.springframework.security.core.userdetails.User principal = (org.springframework.security.core.userdetails.User) SecurityContextHolder.
 	                getContext().getAuthentication().getPrincipal();

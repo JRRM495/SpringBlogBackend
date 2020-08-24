@@ -2,6 +2,8 @@ package blog.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
@@ -14,9 +16,10 @@ import java.security.cert.CertificateException;
 
 @Service
 public class JwtProvider {
-
+	
+	
     private KeyStore keyStore;
-
+    String keystring = "qwertyuiopasdfghjklzxcvbnm123456";
     @PostConstruct
     public void init() {
         try {
@@ -30,10 +33,10 @@ public class JwtProvider {
     }
 
     public String generateToken(Authentication authentication) {
-        User principal = (User) authentication.getPrincipal();
+        User principal = (User) authentication.getPrincipal();      
         return Jwts.builder()
                 .setSubject(principal.getUsername())
-                .signWith(getPrivateKey())
+//                .signWith(getPrivateKey())
                 .compact();
     }
 

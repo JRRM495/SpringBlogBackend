@@ -34,7 +34,7 @@ public class PostController {
     }
     
     
-    @GetMapping("/get/{username}")
+    @GetMapping("/get/user/{username}")
     public ResponseEntity<List<PostDto>> findPostsByUsername(@PathVariable String username) {
         return new ResponseEntity<>(postService.findbyUsername(username), HttpStatus.OK);
 
