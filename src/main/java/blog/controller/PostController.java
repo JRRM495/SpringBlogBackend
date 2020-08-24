@@ -11,7 +11,7 @@ import blog.security.PostService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/posts/")
+@RequestMapping("/api/auth/posts/")
 @CrossOrigin
 public class PostController {
 
