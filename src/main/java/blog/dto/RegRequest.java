@@ -1,9 +1,6 @@
 package blog.dto;
 
-/**
- * @author jorda
- *A simple class to act as a model for a Data Transfer Object between the back and front end. It contains information that users use to register on the blog.
- */
+
 public class RegRequest {
 	private String username;
 	private String password;
